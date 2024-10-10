@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(247, 247, 247);
+    color: midnightblue;
+}
+
+.active {
+    text-decoration: underline;
+    color: blue;
+}
+
+.skip a{
+    position: absolute;
+    top: -40px;
+}
+
+h1{
+    font-size: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    color: darkred;
+    padding-bottom: 40px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
+li {
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
+img {
+    border: 5px solid blue;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+
+}
