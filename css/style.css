@@ -71,8 +71,12 @@ div:focus{
     padding-bottom: 12px;
 }
 
-.skip a{
+.skip{
     background-color: #00274C;
+}
+
+.skip a{
+
     color: white;
     position: absolute;
     top: -40px;
