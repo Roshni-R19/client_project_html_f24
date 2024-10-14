@@ -104,6 +104,19 @@ div:focus{
 
 /* Navigation bar styling */
 
+.navigation {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 20px 20px;
+    background-color: aliceblue;
+    overflow: scroll;
+}
+
 .navigation p{
     padding: 0px;
     color: #00274C;
@@ -111,7 +124,7 @@ div:focus{
     font-family: "Atkison Hyperlegible", Montserrat, Arial, Helvetica, sans-serif;
     text-align: center;
     margin-bottom: 16px; 
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .navigation img{
@@ -126,18 +139,6 @@ div:focus{
     text-decoration: underline;
     color: #00274C;
     background-color: #FFCB05;
-}
-
-.navigation {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 16px;
-    margin: 20px 20px;
-    background-color: aliceblue;
 }
 
 .navigation > div{
