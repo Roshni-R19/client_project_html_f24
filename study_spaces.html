@@ -9,6 +9,10 @@
     <title>Study Spaces in the University</title>
 </head>
 <body>
+        <!-- <form
+    action="https://formspree.io/f/mzzbgdqk"
+    method="POST"
+    > -->
     <div class="skip"><a href = "#main">Skip to Main Content</a></div>
     <header>
         <div class="logo"><img src="images/UMSI_signature_marketing_no_U_white.png" alt="UMSI Logo"></div>
@@ -39,10 +43,9 @@
                 </div>
             </div>
         </nav>
-        <h1>Study Spaces in The University of Michigan</h1>
-
     </header>
     <main class="container" id="main">
+        <h1>Study Spaces in The University of Michigan</h1>
         <!--Content copied from https://studyspaces.umich.edu/-->
         <div class="intro">
             <p>
@@ -53,14 +56,13 @@
 
         </div>
 
-        <section>
-            <h2>Explore what’s available and where</h2>
-            <div class="options">
-                <div class="options-item1"><a href="#libraries">Libraries</a></div>
-                <div class="options-item2"><a href="#central-campus">Central Campus</a></div>
-                <div class="options-item3"><a href="#north-campus">North Campus</a></div>
-            </div>
-        </section>
+        <h2>Explore what’s available and where</h2>
+        <div class="options">
+            <div class="options-item1"><a href="#libraries">Libraries</a></div>
+            <div class="options-item2"><a href="#central-campus">Central Campus</a></div>
+            <div class="options-item3"><a href="#north-campus">North Campus</a></div>
+        </div>
+
 
         <section id="libraries">
             <h3>UM Libraries</h3>
@@ -132,10 +134,64 @@
                 <li>Lurie Biomedical Engineering Building (LBME)</li>
             </ol>
         </section>
+        <section id="book-study-space">
+            <h2>Book a study space:</h2>
+            <form id="book_space" onsubmit="handleSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
 
+                <label for="email">Your University Email:</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@umich.edu" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required><br><br>
+
+                <label for="booking_date">Choose Date:</label>
+                <input type="date" id="booking_date" name="booking_date" required><br><br>
+            
+                <input type="submit" value="Submit">
+            </form>
+            <p class="message"></p>
+        </section>
     </main>
     <footer>
-        <p>&copy; The Regents of the University of Michigan</p>
-    </footer>  
+        <div class="footer-logo"><img src="images/UMSI_signature_marketing_no_U_white.png" alt="UMSI Logo"></div>
+        <div>
+            <a href = "index.html">Home</a>
+            <a href = "study_spaces.html">Study</a>
+        </div>
+        <div>
+            <a href = "things_to_do.html">Leisure</a>
+            <a href = "dining_halls.html">Dining</a>
+        </div>
+        </div>
+        <p>&copy; <span id="year"></span> The Regents of the University of Michigan</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        function handleSubmit(event) {
+
+            // Prevent form submission from reloading the page
+            // prevent default has been added by GPT, since I troubleshooted my code using it.
+            // It suggested to prevent reloading of webpage, I should add the following
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const booking_date = document.getElementById("booking_date").value;
+
+            // // Validate form data
+            // if (!name || !email || !booking_date) {
+            //     alert("Please fill in all fields!");
+            //     return;
+            // }
+
+            //Checking working status of all form fields
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Booking Date:", booking_date);
+
+            document.getElementsByClassName("message")[0].innerHTML = "You have booked a study space! Please check your email for confirmation.";
+            document.getElementById("book_space").style.display = "none";
+        }
+    </script> 
 </body>
 </html>

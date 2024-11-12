@@ -87,6 +87,7 @@ div:focus{
     color: white;
     position: absolute;
     top: 0px;
+    z-index: 9999;
 }
 
 .logo {
@@ -98,7 +99,7 @@ div:focus{
     position: relative;
     display: block;
     margin: auto;
-    height: 60px;
+    height: 52px;
 
 }
 
@@ -115,6 +116,7 @@ div:focus{
     margin: 20px 20px;
     background-color: aliceblue;
     overflow: scroll;
+    border: solid 1px #7b7b7b;
 }
 
 .navigation p{
@@ -272,12 +274,244 @@ div a{
 }
 
 footer{
-    margin: 0px 24px 120px 24px;
+    padding: 0px 24px 120px 24px;
     background-color: #00274C;
     color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 40px;
+}
+
+footer a{
+    color: #ffffff;
+    display: block;
+    margin: 12px;
+}
+
+.footer-logo{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    max-width: 280px;
+}
+
+footer div:nth-child(2){
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+footer div:nth-child(3){
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+footer p{
+    grid-column: 1/ span 4;
+    grid-row: 2/3;
+}
+
+
+
+/* styling the form to submit */
+
+#book_space{
+    display: block;
+    background-color: #f3f3f3;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+input[type="submit"] {
+    background-color: #FFCB05; 
+    border-radius: 8px;
+    color: #00274C; 
+    padding: 10px;
+    width: 60%;
+}
+
+input[type="text"], input[type="date"], input[type="email"] {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+/* form message */
+
+.message{
+    background-color: #f3f3f3;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 160%;
+}
+
+/* 404 page styling */
+
+.page_not_found{
     text-align: center;
+}
+
+.page_not_found_intro{
+    text-align: center;
+    margin: 20px 40px;
+}
+
+.page_not_found_intro a{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+.page_not_found_image {
+    display: block;
+    margin: auto;
+    max-width: 280px;
 }
 
 @media screen and (prefers-reduced-motion: reduce){
     /* the website currently does not have animated elements or gifs */
 }    
+
+@media screen and (min-width: 900px) {
+
+    /* main page structure */
+    main {
+        margin: 60px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 40px;
+    }
+
+    /* navigation bar styling */
+    header{
+        display: flex;
+        flex-flow: row nowrap;
+        position: sticky;
+        top: 0px;
+        /* the following two lines of code are from HW5 flex */
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        background-color: #00274C;
+
+    }
+
+    .navigation {
+        position: sticky;
+        top: 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        overflow:visible;
+        gap: 12px;
+        background-color: aliceblue;
+        padding: 8px 12px;
+        border-radius: 12px;
+    }
+
+    /* links and elements inside nav bar styling */
+
+    .navigation div{
+        /* right margin is larger for offset */
+        padding: 12px 20px 12px 16px;
+        border-radius: 8px;
+    }
+    
+    .navigation p{
+        color:#00274C;
+        margin: 0px;
+    }
+
+    .navigation a{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .navigation img{
+        margin: 0px;
+        padding: 0px;
+        height: 20px;
+        width: 20px;
+    }
+    
+    .active {
+        border: none;
+        background-color: #FFCB05;
+    }
+    
+    /* styling the sub-links inside the page to stick and be on the side*/
+    .options {
+        display: inline;
+        grid-column: 1/2;
+        padding: 20px 20px;
+        align-content: start;
+        border: 1px solid #b4bdc5;
+        border-radius: 12px;
+        position: sticky;
+        top: 120px;
+        height: 400px;
+        background-color: white;
+    }
+
+
+    .options-item1, .options-item2, .options-item3{
+        margin-bottom: 40px;
+    }
+
+    
+    /* letting the introduction take all columns */
+    h1, .intro, .single-grid, .restaurant, .calendar{
+       grid-column: 1/3;
+    }
+
+    #mental-health, #life-outside-classroom, #physical-health, #libraries, #central-campus, #north-campus, #locations, #nutrition, #meal-plans, #book-study-space{
+        grid-column: 2/3; 
+    }
+
+    /* re-formatting footer padding for consistency */
+
+    footer{
+        padding: 12px 60px 12px 60px;
+    }
+
+    /* 404 page styling */
+
+    .container_page_not_found {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .container_page_not_found h1{
+        grid-column: 1/2;
+    }
+
+    .page_not_found_intro{
+        margin: 20px 20px;
+        grid-column: 1/2;
+        text-align: center;
+    }
+
+    .page_not_found a{
+        text-decoration: underline;
+        margin-bottom: 60px;
+        grid-column: 1/-1;
+        text-align: center;
+    }
+
+    .image_container {
+        max-width: 280px;
+        grid-column: 2/-1;
+    }
+}

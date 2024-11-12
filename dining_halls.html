@@ -39,11 +39,12 @@
                 </div>
             </div>
         </nav>
-        <h1>Dining Halls at The University of Michigan</h1>
+        
     </header>
     <main class="container" id="main">
+        <h1>Dining Halls at The University of Michigan</h1>
         <!--Content copied from https://dining.umich.edu/-->
-        <div>
+        <div class="intro">
             <p>Welcome to University of Michigan Dining, where culinary excellence meets community spirit. Our dining services are designed to nourish and delight all students of the campus community. <br><br>Our menus are thoughtfully curated to feature multiple cuisines from around the world, ensuring that every meal is an opportunity to explore new flavors and enjoy your favorites. From comforting classics to adventurous international dishes, our dining halls and cafés have something for every palate.Understanding the importance of safety and health, M Dining takes meticulous care to accommodate students with dietary restrictions and allergies.<br><br>We offer a variety of meal choices that are clearly labeled with allergen information, and our team works closely with students to provide personalized support. Whether you need gluten-free options, nut-free zones, or have any other dietary needs, we’ve got you covered. Your well-being is our priority.</p>
         </div>
         
@@ -97,7 +98,19 @@
         </section>
     </main>
     <footer>
-        <p>&copy; The Regents of the University of Michigan</p>
+        <div class="footer-logo"><img src="images/UMSI_signature_marketing_no_U_white.png" alt="UMSI Logo"></div>
+        <div>
+            <a href = "index.html">Home</a>
+            <a href = "study_spaces.html">Study</a>
+        </div>
+        <div>
+            <a href = "things_to_do.html">Leisure</a>
+            <a href = "dining_halls.html">Dining</a>
+        </div>
+        <p>&copy; <span id="year"></span> The Regents of the University of Michigan</p>
     </footer>  
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script> 
 </body>
 </html>

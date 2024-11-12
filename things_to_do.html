@@ -39,16 +39,16 @@
                 </div>
             </div>
         </nav>
-        <h1>Things to do in Ann Arbor</h1>
     </header>
     <main class="container" id="main">
+        <h1>Things to do in Ann Arbor</h1>
         <!--Content copied from https://internationalcenter.umich.edu/resources/life/things-to-do-->
-        <div>
+        <div class="intro">
             <p>Both the University of Michigan and the local Ann Arbor community host a wide variety of events and activities for people of all ages and interests through the year. Check out some popular activities below:</p>
             <img src="images/MCOMMONS-BandPractice_EXT-8.jpg.jpg" alt="Students practising in a band">
         </div>
 
-        <section>
+        <section class="calendar">
             <h2>U-M Student Life Events Calendar</h2>
             <a href = "https://events.umich.edu/">Happening @ Michigan</a>
         </section>
@@ -77,7 +77,7 @@
                 </ul>
             </section>
         </div>
-        <section>
+        <section class="restaurant">
             <!-- Content from UM Campus Information and Destination A2 -->
             <div>
                 <h3>Restuarants in Ann Arbor</h3>
@@ -104,7 +104,19 @@
         </section>
     </main>
     <footer>
-        <p>&copy; The Regents of the University of Michigan</p>
+        <div class="footer-logo"><img src="images/UMSI_signature_marketing_no_U_white.png" alt="UMSI Logo"></div>
+        <div>
+            <a href = "index.html">Home</a>
+            <a href = "study_spaces.html">Study</a>
+        </div>
+        <div>
+            <a href = "things_to_do.html">Leisure</a>
+            <a href = "dining_halls.html">Dining</a>
+        </div>
+        <p>&copy; <span id="year"></span> The Regents of the University of Michigan</p>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>

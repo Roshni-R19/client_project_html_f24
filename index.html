@@ -39,11 +39,11 @@
                 </div>
             </div>
         </nav>
-        <h1>Student Success Portal</h1>
 
     </header>
     <main class="container" id="main">
-        <section>
+        <h1>Student Success Portal</h1>
+        <section class="intro">
             <h2>Welcome to the UM Grad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Graduate School Success.This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
             <ol>
@@ -129,7 +129,19 @@
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
     </main>
     <footer>
-        <p>&copy; The Regents of the University of Michigan</p>
-    </footer> 
+        <div class="footer-logo"><img src="images/UMSI_signature_marketing_no_U_white.png" alt="UMSI Logo"></div>
+        <div>
+            <a href = "index.html">Home</a>
+            <a href = "study_spaces.html">Study</a>
+        </div>
+        <div>
+            <a href = "things_to_do.html">Leisure</a>
+            <a href = "dining_halls.html">Dining</a>
+        </div>
+        <p>&copy; <span id="year"></span> The Regents of the University of Michigan</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script> 
 </body>
 </html>
