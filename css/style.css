@@ -400,7 +400,7 @@ input[type="text"], input[type="date"], input[type="email"] {
         align-items: center;
         padding: 0px 40px;
         background-color: #00274C;
-        z-index: 100;
+        z-index: 1000;
 
     }
 
@@ -416,6 +416,7 @@ input[type="text"], input[type="date"], input[type="email"] {
         background-color: aliceblue;
         padding: 8px 12px;
         border-radius: 12px;
+        z-index: 1000;
     }
 
     /* links and elements inside nav bar styling */
